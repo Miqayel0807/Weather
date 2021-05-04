@@ -52,7 +52,7 @@ class Temperature extends React.Component{
         })
     }
 
-    request=(keyPress)=>{
+    request=()=>{
         fetch(`https://goweather.herokuapp.com/weather/${this.state.inputValue}`)
         .then(res=>res.json())
         .then(data=>{
@@ -66,8 +66,7 @@ class Temperature extends React.Component{
                 description:data.description,
                 inputValue:'',
                 tomorrow:data.forecast[0],
-                secondDay:data.forecast[1],
-                thirdDay:data.forecast[2]
+               
             })
       
 
